@@ -274,7 +274,7 @@ while 1 == 1:
     
     # Alterar a data da operação    
     elif opcao == "a":
-        print("Forma da data: dd/mm/aaaa")
+        print("Formato da data: dd/mm/aaaa")
         print("Ela deve ser inferior que a data de hoje para poder fazer esse teste")
         operacao["reloginho"] = valor = str(input("Informe a data: "))
     
