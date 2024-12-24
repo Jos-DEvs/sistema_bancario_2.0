@@ -28,7 +28,7 @@ def confirmacao_de_sucesso_da_operacao(status = False, **meu_dict):
         pe_pagina = f"{relogio()}: DEPOSITAR"
         print(f"{pe_pagina:^50}") # Centralizar o texto
         meu_dict.clear()
-    
+        
     elif meu_dict.get("saque"):  # Verifica se "saque" existe e é True
         print(f'{"Saque realizado com sucesso!":=^50}') # Centralizar o texto
         pe_pagina = f"{relogio()}: SACAR"
@@ -40,6 +40,13 @@ def confirmacao_de_sucesso_da_operacao(status = False, **meu_dict):
         pe_pagina = f"{relogio()}: CADASTRO DO CLIENTE"
         print(f"{pe_pagina:^50}") # Centralizar o texto
         meu_dict.clear()
+    
+    elif meu_dict.get("conta"):  # Verifica se "conta" existe e é True
+        print(f'{"Cadastro realizado com sucesso!":=^50}') # Centralizar o texto
+        pe_pagina = f"{relogio()}: CADASTRO DA CONTA"
+        print(f"{pe_pagina:^50}") # Centralizar o texto
+        meu_dict.clear()
+    
     else:
         print("Nenhuma operação identificada.")
 
@@ -198,7 +205,7 @@ def criar_conta(cpf_cliente):
         
         conta.append([cpf_cliente, max(minha_lista) + 1, "0001"])
         
-    print(conta)
+    confirmacao_de_sucesso_da_operacao(conta = True)
 
 while 1 == 1:
     
